@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="secondary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-text color="light">
+        <ion-text color="light" class="fw700">KeepHealthy</ion-text>
+      </ion-text>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="medium" (click)="notifications()">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-badge color="dark" slot="end">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card no-margin class="no-radius">
+    <ion-item lines="none" color="medium">
+        <ion-icon name="compass"></ion-icon>
+      <ion-label (click)="searchFilter()">
+        <p class="text-11x no-margin">
+          <ion-text style="font-size: 20px" color="primary"> {{yourLocation}} </ion-text>
+          <ion-icon color="primary" name="arrow-down"></ion-icon>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-item lines="none"></ion-item>
+  <ion-grid id="homegrid">
+    <ion-row>
+      <ion-label>What would you like to see today?</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="bg-white">
+          <ion-img [src]="testsImg"></ion-img>
+          <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            Diagnostics
+          </ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="bg-white">
+          <ion-img [src]="reportsImg"></ion-img>
+          <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            Reports
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-label>Hospital Network</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            New Registration
+          </ion-button>
+        </ion-card>
+        <ion-card class="bg-white">
+          <ion-img [src]="hospNetImg"></ion-img>
+          <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            My Hospitals
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <popmenu></popmenu>
+</ion-content>

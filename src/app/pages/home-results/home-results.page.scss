@@ -1,0 +1,43 @@
+:host {
+    ion-content {
+        --background: var(--ion-color-light);
+    }
+
+    ion-item {
+        border-radius: 0;
+        border-bottom: 1px dotted var(--ion-color-medium);
+    }
+
+    ion-card {
+        &.no-radius {
+            border-radius: 0;
+        }
+    }
+}
+#homegrid{
+    ion-row{
+        width: 100%;
+        ion-label{
+            margin-left: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        ion-col{
+            width: 50%;
+            ion-card{
+                margin-left: 5px;
+                margin-top: center;
+                width: 90%;
+                ion-img{
+                    object-fit: resize;
+                    height: 145px !important;
+                    width: auto !important;
+                    border: 0;
+                    padding: 0;
+                    background-color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+    
+}
